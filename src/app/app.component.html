@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <div class="taskbar">
+        <div class="socialtitle">
+          <div class="icon-header">
+            <a href="https://www.facebook.com/softdreams.vn" target="_blank"><i class="fa-brands fa-facebook social" style="color: #000000;"></i></a>
+            <a href="https://www.instagram.com/hashtechacademy/" target="_blank"><i class="fa-brands fa-instagram social" style="color: #000000;"></i></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fa-regular fa-envelope social" style="color: #000000;"></i></a>
+            <a href="https://softdreams.vn/?fbclid=IwAR38gZ0pweiGTWWnIerhcF65lOUJ7NjJTPMXAnn0WSkw0cDwGPDELDDH1ls" target="_blank"><i class="fa-solid fa-earth-americas social" style="color: #000000;"></i></a>
+          </div>
+        </div>
+        <div class="text-header">
+          <ul class = "nav">
+            <li class="link-header">
+              <a routerLink="employees" routerLinkActive="active" class="nav-link">Home</a>
+            </li>
+            <li class="link-header">
+              <a routerLink="create-employee" routerLinkActive="active" class="nav-link" (click)="addFunction()">Add Employee</a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-header">
+            <button *ngIf="! isLoggedIn()" type="button" class="btn btn-success button-login btn-log" routerLink="/login">Login</button>
+            <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger button-logout btn-log" (click)="logout()" >Logout</button>
+        </div>
+      </div>
+      <div>
+        <!-- *ngIf="isLoggedIn()"
+        *ngIf="employeeService.roleMatch(['user'])" -->
+      </div>
+    </div>
+    <section id="content-list">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
+
+
+
+
+

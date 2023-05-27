@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+      <h3>SoftDreams</h3>
+      <h2>Company</h2>
+      <h5>Nâng tầm quản trị doanh nghiệp</h5>
+      <p class="p-login"><i class="fa-solid fa-phone" style="color: #c2c2c2;"></i> Hotline: 1900 33 69</p>
+      <p><i class="fa-solid fa-location-dot" style="color: #bdbcbc;"></i> Nhà khách ATS, số 8 Phạm Hùng, Mễ Trì, Nam Từ Liêm, Hà Nội</p>
+      </div>
+    </div>
+    <div class="right">
+      <h4 class="text-sign-up">Sign-up</h4>
+      <form #signUpForm="ngForm" (ngSubmit)="signUp(signUpForm)" clas>
+        <input type="text" ngModel name="username" id="username" placeholder="Enter your username"
+        class="form-control mb-3" required>
+        <input type="email" ngModel name="email" id="email" placeholder="Enter your email"
+        class="form-control mb-3" required>
+        <input type="text" ngModel name="address" id="address" placeholder="Enter your address"
+        class="form-control mb-3" required>
+        <input type="text" ngModel name="phoneNumber" id="email" placeholder="Enter your Phonenumber"
+        class="form-control mb-3" required>
+        <input type="text" ngModel name="position" id="email" placeholder="Enter your position"
+        class="form-control mb-3" required>
+        <input type="text" ngModel name="password" id="email" placeholder="Enter your password"
+        class="form-control mb-3" required>
+        <input type="submit" value="Register"
+        class="btn-login">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

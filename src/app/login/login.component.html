@@ -1,0 +1,49 @@
+<!-- <div class ="container mt-5 w-50">
+  <div class = "card" style="padding: 30px;">
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <input type="text" ngModel name="email" id="email" placeholder="Enter your email"
+      class="form-control mb-3"
+      >
+      <input type="password" ngModel name="password" id="password" placeholder="Enter your password"
+      class="form-control mb-3">
+      <input type="submit" value="Login"
+      class="btn btn-outline-primary form-control rounded-0">
+    </form>
+  </div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+      <h3>SoftDreams</h3>
+      <h2>Company</h2>
+      <h5>Nâng tầm quản trị doanh nghiệp</h5>
+      <p class="p-login"><i class="fa-solid fa-phone" style="color: #c2c2c2;"></i> Hotline: 1900 33 69</p>
+      <p><i class="fa-solid fa-location-dot" style="color: #bdbcbc;"></i> Nhà khách ATS, số 8 Phạm Hùng, Mễ Trì, Nam Từ Liêm, Hà Nội</p>
+      </div>
+    </div>
+    <div class="right">
+      <h4>Login</h4>
+      <p class="m-20">Don't have an account? <a routerLink="/sign-up" routerLinkActive="active">Creat Your Account</a> it takes less than a minute</p>
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" clas>
+        <input type="text" ngModel name="email" id="email" placeholder="Enter your email"
+        class="form-control mb-3">
+        <input type="password" ngModel name="password" id="password" placeholder="Enter your password"
+        class="form-control mb-3">
+        <input type="submit" value="Login"
+        class="btn-login">
+      </form>
+    </div>
+  </div>
+  </body>
+</html>

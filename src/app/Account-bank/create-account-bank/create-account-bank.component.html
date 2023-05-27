@@ -1,0 +1,17 @@
+<div class = "col-md-8 offset-md-3">
+
+  <h3>Create Account Bank</h3>
+
+  <form #createForm="ngForm" (ngSubmit)="createAccountBank(createForm)" clas>
+    <input type="text" ngModel name="bank" id="bank" placeholder="Enter your bank"
+    class="form-control mb-3" required>
+    <input type="text" ngModel name="accountNumber" id="accountNumber" placeholder="Enter your AccountNumber"
+    class="form-control mb-3" required>
+    <input type="text" ngModel name="branch" id="branch" placeholder="Enter your branch"
+    class="form-control mb-3" required>
+    <input type="text" ngModel name="cardType" id="cardType" placeholder="Enter your CardType"
+    class="form-control mb-3" required>
+    <input type="submit" value="Submit" class="btn btn-success">
+  </form>
+</div>
+

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../BTL TTCS/fe_web_btl"
+		},
+		{
+			"path": "../../../../../../Frame_work/Angular/tour-of-heroes"
+		},
+		{
+			"path": "../../../../../../Front end/Test"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Test"
+	}
+}

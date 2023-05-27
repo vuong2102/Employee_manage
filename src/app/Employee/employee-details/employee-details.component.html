@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <section>
+    <h2 class = "text_center header-detail">Employee Detail</h2>
+    <div id="banner">
+      <div class="detail_e">
+        <div class="detailcol1">
+          <div class="user-profilesinglepage" id="avatar-header">
+            <div class="avatar-header">
+                <div class="avatar-wrapper">
+                    <!-- <img class="profile-pic" src="/">
+                    <div class="upload-button">
+                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                    </div> -->
+                    <input class="my-file" type="file" accept="image/*"/>
+                    <i class="fa-solid fa-camera" style="color: #000000;"></i>
+                </div>
+                <div class="nametitle text-center">
+                    <h5>{{employee.username}}</h5>
+                    <h5>{{employee.position}}</h5>
+                </div>
+                <div class="socialtitle text-center social-detail">
+                  <a href="https://www.facebook.com/Hashtech-Academy-104675144484652" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/hashtechacademy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://twitter.com/HashtechA" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                  <a href="https://www.youtube.com/channel/UCcGQTLRIjg4A-Dc6LeLH6KA?view_as=subscriber" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="detailcol2">
+          <h2 class="username_detail">{{employee.username}}</h2>
+          <div class="detail_info">
+            <label><b>Quantity Accounts: </b></label> {{employee.accountBanks.length}}
+          </div>
+          <div class="detail_info">
+            <label><b>Email: </b></label> {{employee.email}}
+          </div>
+          <div class="detail_info">
+            <label><b>PhoneNumber: </b></label> {{employee.phoneNumber}}
+          </div>
+          <div class="detail_info">
+            <label><b>Address: </b></label> {{employee.address}}
+          </div>
+        </div>
+      </div>
+      <div class="table table-striped">
+        <h3 class="header-account">Account Bank Details</h3>
+        <div class="column-table">
+          <h6 class="thanhAccount">AccountNumber</h6>
+          <h6 class="thanhAccount">Bank</h6>
+          <h6 class="thanhAccount">Cardtype</h6>
+          <h6 class="thanhAccount">Branch</h6>
+          <h6 class="thanhAccount">Action</h6>
+        </div>
+        <div class="table table-striped table-account" *ngFor="let accountbank of employee.accountBanks; let i = index;">
+          <p class="content-account">{{accountbank.accountNumber}}</p>
+          <p class="content-account">{{accountbank.bank}}</p>
+          <p class="content-account">{{accountbank.cardType}}</p>
+          <p class="content-account">{{accountbank.branch}}</p>
+          <div class="butt">
+            <button (click)="updateAccountBank(employee.id)" class = "btn btn-info btn-account">Update</button>
+            <button (click)="updateAccountBank(employee.id)" class = "btn btn-danger btn-account">Delete</button>
+          </div>
+        </div>
+
+      </div>
+      <div>
+        <button class="btn btn-info btn_add_account" (click)="createAccountBank()">Add Account</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<h2> Account Bank List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Account Number</th>
+            <th> Bank Name </th>
+            <th> Branch Location</th>
+            <th> Card Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of accountBank" >
+            <td> {{ employee.bank }} </td>
+            <td> {{ employee.accountNumber }} </td>
+            <td> {{ employee.branch }} </td>
+            <td> {{ employee.cardType }} </td>
+            <td>
+                <button (click) = "updateAccountBank(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteAccountBank(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
